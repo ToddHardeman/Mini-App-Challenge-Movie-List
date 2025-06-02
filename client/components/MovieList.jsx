@@ -1,23 +1,25 @@
 import '../styles/MovieList.css';
-
-const movies = [
-  {title: 'Mean Girls'},
-  {title: 'Hackers'},
-  {title: 'The Grey'},
-  {title: 'Sunshine'},
-  {title: 'Ex Machina'},
-];
+import { useEffect, useState } from 'react';
 
 function MovieList() {
+  const [movies, setMovies] = useState([]);
+
+  useEffect(() => {
+    fetch('http://localhost:8080/movies')
+      .then(response => response.json())
+      .then(data => setMovies(data))
+      .catch(error => console.log('Error fetching movies:', error));
+  }, []);
 
   return (
     < >
     <div className='movie-list'>
-          <h1>This is the movie list screen.</h1>
+          <h1>Here are your movies</h1>
           <ul>
-            {movies.map((movie, index) => (
+            {movies.map((listOfMovies, index) => (
               <li key={index} className='movie-item'>
-                {movie.title}
+                <h3>{listOfMovies.title}</h3>
+                <img src={listOfMovies.cover} alt={listOfMovies.title} className='movie-cover' />
               </li>
             ))}
           </ul>
