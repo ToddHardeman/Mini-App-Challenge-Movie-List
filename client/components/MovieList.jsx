@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 
 function MovieList() {
   const [movies, setMovies] = useState([]);
+  const [newMovie, setNewMovie] = useState({ title: '', cover: '' });
 
   useEffect(() => {
     fetch('http://localhost:8080/movies')
@@ -12,20 +13,34 @@ function MovieList() {
   }, []);
 
   return (
-    < >
-    <div className='movie-list'>
-          <h1>Here are your movies</h1>
-          <ul>
-            {movies.map((listOfMovies, index) => (
-              <li key={index} className='movie-item'>
-                <h3>{listOfMovies.title}</h3>
-                <img src={listOfMovies.cover} alt={listOfMovies.title} className='movie-cover' />
-              </li>
-            ))}
-          </ul>
+    <div className="movie-list">
+      <h1 className="header">Toddflix</h1>
+
+      <div className="category">
+        <h2 className="category-title">New on Toddflix</h2>
+        <div className="movie-row">
+          {movies.map((movie, index) => (
+            <div key={index} className="movie-item">
+              <img src={movie.cover} alt={movie.title} className="movie-cover" />
+              <h3>{movie.title}</h3>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="category">
+        <h2 className="category-title">Popular Movies</h2>
+        <div className="movie-row">
+          {movies.map((movie, index) => (
+            <div key={index} className="movie-item">
+              <img src={movie.cover} alt={movie.title} className="movie-cover" />
+              <h3>{movie.title}</h3>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
-    </>
-  )
+  );
 }
 
 export default MovieList;

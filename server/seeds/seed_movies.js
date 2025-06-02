@@ -11,5 +11,10 @@ exports.seed = async function(knex) {
     {id: 3, title: 'The Grey', cover: "https://m.media-amazon.com/images/M/MV5BNDY4MTQwMzc1MV5BMl5BanBnXkFtZTcwNzcwNTM5Ng@@._V1_.jpg"},
     {id: 4, title: 'Sunshine', cover: "https://m.media-amazon.com/images/M/MV5BNmExYTA4MGYtNWUwNC00YTZhLWE0YzUtMjI0OGYyMmQ4YTVkXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"},
     {id: 5, title: 'Ex Machina', cover: "https://m.media-amazon.com/images/M/MV5BMTUxNzc0OTIxMV5BMl5BanBnXkFtZTgwNDI3NzU2NDE@._V1_FMjpg_UX1000_.jpg"},
+    { id: 6, title: 'Inception', cover: "https://m.media-amazon.com/images/I/71uKM+LdgFL.jpg" },
+    { id: 7, title: 'The Matrix', cover: "https://m.media-amazon.com/images/I/71PfZFFz9yL._AC_UF894,1000_QL80_.jpg" },
+    { id: 8, title: 'Interstellar', cover: "https://m.media-amazon.com/images/I/71JC2qvPx5L._AC_UF894,1000_QL80_.jpg" },
+    { id: 9, title: 'The Dark Knight', cover: "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_FMjpg_UX1000_.jpg" },
+    { id: 10, title: 'Pulp Fiction', cover: "https://m.media-amazon.com/images/I/61Z4YX7EbtL._AC_UF894,1000_QL80_.jpg" },
   ]);
 };
