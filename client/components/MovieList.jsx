@@ -67,9 +67,9 @@ function MovieList() {
 
       <div className="category">
         <h2 className="category-title">New on Toddflix</h2>
-        <div className="movie-row"> {movies.map((movie, index) => (
-            <div key={index} className="movie-item">
-              <button className='delete-button' onClick={() => handleDeleteMovie(index)}>X</button>
+        <div className="movie-row"> {movies.map((movie) => (
+            <div key={movie.id} className="movie-item">
+              <button className='delete-button' onClick={() => handleDeleteMovie(movie.id)}>X</button>
               <img src={movie.cover} alt={movie.title} className="movie-cover" />
               <h3>{movie.title}</h3>
             </div>
@@ -80,9 +80,9 @@ function MovieList() {
       <div className="category">
         <h2 className="category-title">Popular Movies</h2>
         <div className="movie-row">
-          {movies.map((movie, index) => (
-            <div key={index} className="movie-item">
-              <button className='delete-button' onClick={() => handleDeleteMovie(index)}>X</button>
+          {movies.map((movie) => (
+            <div key={movie.id} className="movie-item">
+              <button className='delete-button' onClick={() => handleDeleteMovie(movie.id)}>X</button>
               <img src={movie.cover} alt={movie.title} className="movie-cover" />
               <h3>{movie.title}</h3>
             </div>
