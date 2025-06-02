@@ -28,10 +28,12 @@
   width: 200px; 
   text-align: center;
   transition: transform 0.3s ease-in-out;
+  position: relative;
 }
 
 .movie-item:hover {
   transform: scale(1.1); 
+  z-index: 1;
 }
 
 .movie-cover {
@@ -78,4 +80,66 @@
 
 .movie-row::-webkit-scrollbar {
   display: none; 
+}
+.delete-button {
+  background-color: transparent; 
+  color: red;
+  font-weight: bold;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  position: absolute;
+}
+.delete-button:hover {
+  background-color: darkred;
+  color: white;
+}
+.subheader {
+  width: 96.5%;
+  background-color: #222;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid #444;
+  margin-bottom: 20px;
+}
+
+.add-movie {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+}
+
+.add-movie-input {
+  flex: 1;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #444;
+  border-radius: 5px;
+  background-color: #333;
+  color: white;
+}
+
+.add-movie-input::placeholder {
+  color: #aaa;
+}
+
+.add-movie-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #e50914;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-movie-button:hover {
+  background-color: #b00610;
 }
