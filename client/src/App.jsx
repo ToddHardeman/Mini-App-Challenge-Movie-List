@@ -1,13 +1,17 @@
-import { useState } from 'react'
-
-import './App.css'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import LaunchScreen from '../components/LaunchScreen'
+import MovieList from '../components/MovieList'
+import './App.css';
 
 function App() {
 
   return (
-    <>
-      <h1>Mini-App Challenge: Movie List</h1>
-    </>
+    <Router>
+      <Routes>
+        <Route path='/' element={<LaunchScreen />} />
+        <Route path='/MovieList' element={<MovieList />} />
+      </Routes>
+    </Router>
   )
 }
 
