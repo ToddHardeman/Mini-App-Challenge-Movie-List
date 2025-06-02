@@ -16,5 +16,10 @@ exports.seed = async function(knex) {
     { id: 8, title: 'Interstellar', cover: "https://m.media-amazon.com/images/I/71JC2qvPx5L._AC_UF894,1000_QL80_.jpg" , watched: false},
     { id: 9, title: 'The Dark Knight', cover: "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_FMjpg_UX1000_.jpg", watched: false },
     { id: 10, title: 'Pulp Fiction', cover: "https://m.media-amazon.com/images/I/61Z4YX7EbtL._AC_UF894,1000_QL80_.jpg" , watched: true},
+    { id: 11, title: 'The Shawshank Redemption', cover: "https://m.media-amazon.com/images/I/51NiGlapXlL._AC_UF894,1000_QL80_.jpg" , watched: true},
+    { id: 12, title: 'The Godfather', cover: "https://m.media-amazon.com/images/M/MV5BNGEwYjgwOGQtYjg5ZS00Njc1LTk2ZGEtM2QwZWQ2NjdhZTE5XkEyXkFqcGc@._V1_.jpg" , watched: true},
+    { id: 13, title: 'Forrest Gump', cover: "https://m.media-amazon.com/images/I/613ZgTigTpL._AC_UF894,1000_QL80_.jpg" , watched: true},
+    { id: 14, title: 'Fight Club', cover: "https://i.etsystatic.com/18242346/r/il/c9908e/2412674268/il_fullxfull.2412674268_1sgm.jpg" , watched: true},
+    { id: 15, title: 'The Lord of the Rings', cover: "https://m.media-amazon.com/images/I/81EBp0vOZZL._AC_UF894,1000_QL80_.jpg" , watched: false}
   ]);
 };
